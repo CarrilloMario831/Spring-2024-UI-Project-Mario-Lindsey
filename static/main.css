@@ -1,0 +1,70 @@
+/* homepage.html CSS */
+.hompage-header{
+    font-weight: 1000;
+    font-size: 33px;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    text-align: center;
+}
+
+.website-description{
+    font-size: 20px;
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Align buttons at the center of the container */
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+.button {
+    padding: 10px 20px;
+    margin: 5px; /* Reduced margin for closer proximity */
+    background-color: #007BFF; /* Bootstrap primary blue */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+    border-radius: 12px;
+}
+
+.button:hover {
+    text-decoration: none; /* Explicitly remove underline on hover */
+}
+
+.img-hover {
+    position: relative;
+    overflow: hidden;
+}
+.img-hover img {
+    transition: all 0.3s ease;
+}
+.img-hover:hover img {
+    filter: brightness(50%);
+}
+.img-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 16px; /* Adjusted font size */
+    text-align: center;
+    width: 90%; /* Reduce width to avoid edge clipping */
+    padding: 5px; /* Add padding for better legibility */
+    box-sizing: border-box; /* Include padding in width calculation */
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden; /* Hides text that overflows the element's box */
+    text-overflow: ellipsis; /* Show ellipsis when text overflows */
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+.img-hover:hover .img-text {
+    visibility: visible;
+    opacity: 1;
+}

@@ -3,11 +3,66 @@
 {% block content %}
 
     <head>
-
+        <script src="{{ url_for('static', filename='homepage.js') }}"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script>
+            document.querySelectorAll('.img-hover').forEach(item => {
+                item.addEventListener('mouseenter', event => {
+                    item.querySelector('audio').play();
+                });
+                item.addEventListener('mouseleave', event => {
+                    item.querySelector('audio').pause();
+                    item.querySelector('audio').currentTime = 0;
+                });
+            });
+            </script>
+            
     </head>
 
     <body>
-        <h1> Hi </h1>
+        <div class = "container">
+
+            <div class = "row">
+
+                <div class = "hompage-header"> 
+                    Explore Mexican Regional Music
+                </div>
+
+            </div>
+
+            <div class = "row">
+
+                <div class = "website-description">
+                    Discover and learn the unique characteristics that define each traditional Mexican music genre and its respective region!
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="button-container">
+                    <a href="/link-to-first-page" class="button">Take Me to Learning</a>
+                    <a href="/link-to-second-page" class="button">Test Me</a>
+                </div>
+            </div>
+
+            <div class = "row">
+
+                <div class="carousel-item active">
+                    <div class="row">
+                        <!-- Images with overlay and audio -->
+                        {% for image, genre in [('SonMadera.jpg', 'Son de Madera'), ('LosTigres.png', 'Los Tigres del Norte'), ('MariachiVargas.jpg', 'Mariachi Vargas de Tecalitlán'), ('LosReyes.jpg', 'Los Reyes de Los Sonidos')] %}
+                        <div class="col-md-3 img-hover">
+                            <img src="{{ url_for('static', filename='Images/' ~ image) }}" class="d-block w-100 img-fluid">
+                            <span class="img-text">{{ genre }}</span>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+            </div>
+                
+        </div>
+
     </body>
 
 {% endblock %}
