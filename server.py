@@ -8,6 +8,13 @@ app = Flask(__name__)
 def homepage():
    return render_template('homepage.html')
 
+@app.route('/learn/1')
+def learn():
+   return render_template('learn.html')
+
+@app.route('/quiz/1')
+def quiz():
+   return render_template('quiz.html')
 
 if __name__ == '__main__':
    app.run(debug = True)

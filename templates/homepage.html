@@ -40,8 +40,8 @@
 
             <div class="row">
                 <div class="button-container">
-                    <a href="/link-to-first-page" class="button">Take Me to Learning</a>
-                    <a href="/link-to-second-page" class="button">Test Me</a>
+                    <a href="/learn/1" class="button">Take Me to Learning</a>
+                    <a href="/quiz/1" class="button">Test Me</a>
                 </div>
             </div>
 
@@ -50,7 +50,7 @@
                 <div class="carousel-item active">
                     <div class="row">
                         <!-- Images with overlay and audio -->
-                        {% for image, genre in [('SonMadera.jpg', 'Son de Madera'), ('LosTigres.png', 'Los Tigres del Norte'), ('MariachiVargas.jpg', 'Mariachi Vargas de Tecalitlán'), ('LosReyes.jpg', 'Los Reyes de Los Sonidos')] %}
+                        {% for image, genre in [('SonMadera.jpg', 'Son Jarocho'), ('LosTigres.png', 'Norteño'), ('MariachiVargas.jpg', 'Mariachi'), ('LosReyes.jpg', 'Cumbia Sonidera')] %}
                         <div class="col-md-3 img-hover">
                             <img src="{{ url_for('static', filename='Images/' ~ image) }}" class="d-block w-100 img-fluid">
                             <span class="img-text">{{ genre }}</span>
