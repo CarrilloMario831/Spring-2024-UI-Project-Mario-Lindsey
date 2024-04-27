@@ -16,5 +16,9 @@ def learn():
 def quiz():
    return render_template('quiz.html')
 
+@app.route('/map')
+def map():
+   return render_template('mapTEST.html')
+
 if __name__ == '__main__':
    app.run(debug = True)

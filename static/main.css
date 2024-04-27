@@ -94,3 +94,21 @@ nav .navbar-brand {
     visibility: visible;
     opacity: 1;
 }
+
+/*
+ * MAP CSS
+ */
+
+.mapDiv{
+    padding-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mapDiv path{
+    fill: #8ebd99;
+    stroke: black;
+    stroke-width: 1px;
+    height: 200px;
+}
