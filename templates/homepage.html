@@ -50,7 +50,7 @@
                 <div class="carousel-item active">
                     <div class="row">
                         <!-- Images with overlay and audio -->
-                        {% for image, genre in [('SonMadera.jpg', 'Son Jarocho'), ('LosTigres.png', 'Norteño'), ('MariachiVargas.jpg', 'Mariachi'), ('LosReyes.jpg', 'Cumbia Sonidera')] %}
+                        {% for image, genre in [('SonMadera.jpg', 'Son Mexicano'), ('LosTigres.png', 'Norteño'), ('MariachiVargas.jpg', 'Mariachi'), ('LosReyes.jpg', 'Cumbia Sonidera')] %}
                         <div class="col-md-3 img-hover">
                             <img src="{{ url_for('static', filename='Images/' ~ image) }}" class="d-block w-100 img-fluid">
                             <span class="img-text">{{ genre }}</span>
