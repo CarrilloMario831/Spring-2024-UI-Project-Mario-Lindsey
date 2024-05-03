@@ -5,88 +5,22 @@
 
     <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="path/to/your/stylesheet.css">
+        <script src="{{ url_for('static', filename='learn.js') }}"></script>
+        
     </head>
-
-    <script>
-        $(document).ready(function() {
-
-            // Group hover for Nayarit and Sinaloa
-            $('#MX-NAY, #MX-SIN').hover(
-                function() {
-                // Mouse enter
-                $('#MX-NAY, #MX-SIN').css('fill', '#006847'); // Change fill to red
-                
-                }, 
-                function() {
-                // Mouse leave
-                $('#MX-NAY, #MX-SIN').css('fill', '#8ebd99'); // Change fill back to default
-                }
-            );
-
-            // Group hover for Jalisco, Colima, Zacatecas, Michoacán, Guanajuato, Aguascalientes
-            $('#MX-JAL, #MX-COL, #MX-ZAC, #MX-MIC, #MX-GUA, #MX-AGU').hover(
-                function() {
-                // Mouse enter
-                $('#MX-JAL, #MX-COL, #MX-ZAC, #MX-MIC, #MX-GUA, #MX-AGU').css('fill', '#006847'); // Change fill to red
-                },
-                function() {
-                // Mouse leave
-                $('#MX-JAL, #MX-COL, #MX-ZAC, #MX-MIC, #MX-GUA, #MX-AGU').css('fill', '#8ebd99'); // Change fill back to default
-                }
-            );
-
-            // Group hover for Nuevo León, Chihuahua, Coahuila, Durango, Tamaulipas, Sonora, Baja California, Baja California Sur
-            $('#MX-NEL, #MX-CHH, #MX-COA, #MX-DUR, #MX-TAM, #MX-SON, #MX-BCN, #MX-BCS').hover(
-                function() {
-                // Mouse enter
-                $('#MX-NEL, #MX-CHH, #MX-COA, #MX-DUR, #MX-TAM, #MX-SON, #MX-BCN, #MX-BCS').css('fill', '#006847'); // Change fill to red
-                },
-                function() {
-                // Mouse leave
-                $('#MX-NEL, #MX-CHH, #MX-COA, #MX-DUR, #MX-TAM, #MX-SON, #MX-BCN, #MX-BCS').css('fill', '#8ebd99'); // Change fill back to default
-                }
-            );
-
-            // Group hover for Veracruz, Campeche, Tabasco, Hidalgo, San Luis Potosí, Querétaro, Tlaxcala, Chiapas, Quintana Roo, Yucatán
-            $('#MX-VER, #MX-CAM, #MX-TAB, #MX-HID, #MX-SLP, #MX-QUE, #MX-TLA, #MX-CHP, #MX-ROO, #MX-YUC').hover(
-                function() {
-                // Mouse enter
-                $('#MX-VER, #MX-CAM, #MX-TAB, #MX-HID, #MX-SLP, #MX-QUE, #MX-TLA, #MX-CHP, #MX-ROO, #MX-YUC').css('fill', '#006847'); // Change fill to red
-                },
-                function() {
-                // Mouse leave
-                $('#MX-VER, #MX-CAM, #MX-TAB, #MX-HID, #MX-SLP, #MX-QUE, #MX-TLA, #MX-CHP, #MX-ROO, #MX-YUC').css('fill', '#8ebd99'); // Change fill back to default
-                }
-            );
-
-            $('#MX-MEX, #MX-DIF, #MX-PUE, #MX-MOR').hover(
-                function() {
-                    $('#MX-MEX, #MX-DIF, #MX-PUE, #MX-MOR').css('fill', '#006847');
-                },
-                function() {
-                    $('#MX-MEX, #MX-DIF, #MX-PUE, #MX-MOR').css('fill', '#8ebd99');
-                }
-            );
-
-            $('#MX-GRO, #MX-OAX').hover(
-                function() {
-                    $('#MX-GRO, #MX-OAX').css('fill', '#006847');
-                },
-                function() {
-                    $('#MX-GRO, #MX-OAX').css('fill', '#8ebd99');
-                }
-            );
-            
-        });
-
-    </script>
 
     <body>
         <div class = "container">
 
-            <div class = "instructions-header">
-                Hover over and click on a state to start listening to a regional Mexican music genre!
+            <div class = "row">
+                
+                <div class = "instructions-header">
+                    Hover over and click on a state to start listening to a regional Mexican music genre!
+                </div>
+
             </div>
+
 
             <div class="mapDiv">
 
@@ -253,14 +187,15 @@
                         title="Zacatecas"
                         id="MX-ZAC" />
                     
+                    <!-- Text for the region names -->
                     <text x="270" y="275" fill="black" font-size="15" font-family="Arial" text-anchor="middle" font-weight="bold">Banda</text>
                     <text x="316" y="397" fill="black" font-size="15" font-family="Arial" text-anchor="middle" font-weight="bold">Mariachi</text> 
                     <text x="742" y="305" fill="black" font-size="15" font-family="Arial" text-anchor="middle" font-weight="bold">Son Mexicano</text> 
                     <text x="310" y="120" fill="black" font-size="15" font-family="Arial" text-anchor="middle" font-weight="bold">Norteño</text> 
                     <text x="482" y="471" fill="black" font-size="15" font-family="Arial" text-anchor="middle" font-weight="bold">Chilena</text> 
-                    <!-- <text x="484" y="386" fill="black" font-size="15" font-family="Arial" text-anchor="middle" font-weight="bold">Cumbia Sonidera</text> -->
                     <text x="615" y="340" fill="black" font-size="15" font-family="Arial" text-anchor="middle" font-weight="bold">Cumbia Sonidera</text> 
 
+                    <!-- The arrow to Cumbia Sonidera -->
                     <defs>
                         <marker id="arrow" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto" markerUnits="strokeWidth">
                             <path d="M0,1 L0,6 L9,3 z" fill="black" />
@@ -275,12 +210,11 @@
                         fill="none" />
 
                 </svg>
-
+                
             </div>
+            
 
         </div>
-
-    </body>
 
 </html>
 
