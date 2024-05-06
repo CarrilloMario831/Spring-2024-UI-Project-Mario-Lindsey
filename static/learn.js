@@ -69,29 +69,31 @@ $(document).ready(function() {
 
     // Click events to navigate to different pages based on region
     $('#MX-NAY, #MX-SIN').click(function() {
-        window.location.href = '/learn/2'; // Example URL for the Nayarit and Sinaloa region
+        window.location.href = '/learn/1'; // Example URL for the Nayarit and Sinaloa region
     });
 
     $('#MX-JAL, #MX-COL, #MX-ZAC, #MX-MIC, #MX-GUA, #MX-AGU').click(function() {
-        window.location.href = '/learn/3'; // Adjust URL as necessary
+        window.location.href = '/learn/2'; // Adjust URL as necessary
     });
 
     $('#MX-NEL, #MX-CHH, #MX-COA, #MX-DUR, #MX-TAM, #MX-SON, #MX-BCN, #MX-BCS').click(function() {
-        window.location.href = '/learn/4'; // Adjust URL as necessary
+        window.location.href = '/learn/3'; // Adjust URL as necessary
     });
 
     $('#MX-VER, #MX-CAM, #MX-TAB, #MX-HID, #MX-SLP, #MX-QUE, #MX-TLA, #MX-CHP, #MX-ROO, #MX-YUC').click(function() {
-        window.location.href = '/learn/5'; // Adjust URL as necessary
+        window.location.href = '/learn/4'; // Adjust URL as necessary
     });
 
     $('#MX-MEX, #MX-DIF, #MX-PUE, #MX-MOR').click(function() {
-        window.location.href = '/learn/6'; // Adjust URL as necessary
+        window.location.href = '/learn/5'; // Adjust URL as necessary
     });
 
     $('#MX-GRO, #MX-OAX').click(function() {
-        window.location.href = '/learn/7'; // Adjust URL as necessary
+        window.location.href = '/learn/6'; // Adjust URL as necessary
     });
 
+    
+    
     
     
     
