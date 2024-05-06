@@ -91,10 +91,5 @@ $(document).ready(function() {
     $('#MX-GRO, #MX-OAX').click(function() {
         window.location.href = '/learn/6'; // Adjust URL as necessary
     });
-
-    
-    if()
-    
-    
     
 });
