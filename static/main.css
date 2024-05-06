@@ -119,13 +119,12 @@ nav .navbar-brand {
     height: 200px;
 }
 
-
-
 .container {
     text-align: center; /* Centers the content of the container */
 }
 
 .mapDiv {
+    margin-top: 50px;
     margin-bottom: 20px; /* Adds space between the map and the media player */
 }
 
