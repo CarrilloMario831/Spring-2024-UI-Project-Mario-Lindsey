@@ -3,66 +3,55 @@
 {% block content %}
 
     <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <script src="{{ url_for('static', filename='homepage.js') }}"></script>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <script>
-            document.querySelectorAll('.img-hover').forEach(item => {
-                item.addEventListener('mouseenter', event => {
-                    item.querySelector('audio').play();
-                });
-                item.addEventListener('mouseleave', event => {
-                    item.querySelector('audio').pause();
-                    item.querySelector('audio').currentTime = 0;
-                });
-            });
-            </script>
-            
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">  
     </head>
 
     <body>
-        <div class = "container">
-
-            <div class = "row">
-
-                <div class = "hompage-header"> 
-                    Explore Mexican Regional Music
-                </div>
-
-            </div>
-
-            <div class = "row">
-
-                <div class = "website-description">
-                    Discover and learn the unique characteristics that define each traditional Mexican music genre and its respective region!
-                </div>
-
-            </div>
-
-            <div class="row">
-                <div class="button-container">
-                    <a href="/map" class="button">Take Me to Learning</a>
-                    <a href="/quiz/1" class="button">Test Me</a>
-                </div>
-            </div>
-
-            <div class = "row">
-
-                <div class="carousel-item active">
+        <div class="container-fluid"> <!-- Ensures full width -->
+            <div class="row"> <!-- Ensures a row for columns -->
+    
+                <!-- Left Column for Text and Buttons -->
+                <div class="col-md-7">
                     <div class="row">
-                        <!-- Images with overlay and audio -->
-                        {% for image, genre in [('SonMadera.jpg', 'Son Mexicano'), ('LosTigres.png', 'Norteño'), ('MariachiVargas.jpg', 'Mariachi'), ('LosReyes.jpg', 'Cumbia Sonidera')] %}
-                        <div class="col-md-3 img-hover">
-                            <img src="{{ url_for('static', filename='Images/' ~ image) }}" class="d-block w-100 img-fluid">
-                            <span class="img-text">{{ genre }}</span>
+                        <div class="hompage-header"> 
+                            Explore Mexican Regional Music
                         </div>
-                        {% endfor %}
+                    </div>
+    
+                    <div class="row">
+                        <div class="website-description">
+                            Discover and learn the unique characteristics that define each traditional Mexican music genre and its respective region!
+                        </div>
+                    </div>
+    
+                    <div class="row">
+                        <div class="button-container">
+                            <a href="/map" class="learn-button">Take Me to Learning</a>
+                            <a href="/quiz/1" class="quiz-button">Quiz Me</a>
+                        </div>
                     </div>
                 </div>
+    
+                <!-- Right Column for Images -->
+                <div class="col-md-5">
+                    
+                    <div class="vinyl-wrapper">
+                        
+                        <img src="{{ url_for('static', filename='Images/Vinyl.png') }}" alt="Vinyl" class="vinyl-image">
+                        
+                        <div class="album-cover">
+                            <img id="albumImage" src="{{ url_for('static', filename='Images/MariachiVargas.jpg') }}" alt="Album Cover" class="cover-image">
+                        </div>                                      
 
-            </div>
-                
-        </div>
+                    </div>
 
+                </div>
+    
+            </div> <!-- End of Row -->
+        </div> <!-- End of Container -->
     </body>
+    
 
 {% endblock %}
