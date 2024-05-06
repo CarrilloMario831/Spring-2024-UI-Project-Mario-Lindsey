@@ -15,9 +15,7 @@
             } else {
                 audio.pause();
             }
-        }
-
-        
+        }        
     </script>
 </head>
 
@@ -45,10 +43,17 @@
 
         </div>
 
-        <div class="row">
+        <div class="row">  
             <audio id="audioPlayer" controls>
                 <source src="{{item.audio1}}">
             </audio>
+        </div>
+        
+        <div class="row">
+            <div class="col-10"></div>
+            <div class="col-2">
+                <button class="btn btn-primary" onclick="window.location.href='/map'">Back to Map</button>
+            </div>
         </div>
 
         
