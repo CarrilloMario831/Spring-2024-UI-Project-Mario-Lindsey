@@ -1,9 +1,13 @@
-/* homepage.html CSS */
+.note {
+    position: fixed;
+    pointer-events: none; /* Makes the element non-interactive */
+    opacity: 0; /* Start fully transparent */
+    transition: opacity 0.5s ease-out; /* Fade out smoothly */
+}
 
 /*
- * NAVBAR CSS
+ * layout.html
  */
-
 .navbar{
     background-color: black;
 }
@@ -24,33 +28,37 @@ nav .navbar-brand {
     font-size: 18px;
 }
 
+
+/* homepage.html CSS */
 .hompage-header{
     font-weight: 900;
-    font-size: 35px;
-    padding-top: 45px;
-    padding-bottom: 45px;
-    text-align: center;
+    font-size: 65px;
+    line-height: 1.25; /* Adjust this value to reduce spacing */
+    padding-top: 120px;
+    padding-bottom: 30px;
+    text-align: left;
 }
 
 .website-description{
     font-size: 20px;
-    text-align: center;
-    color: rgb(72, 72, 72);
+    text-align: left;
+    color: black;
 }
 
 .button-container {
     display: flex;
-    justify-content: center; /* Align buttons at the center of the container */
+    justify-content: left; /* Align buttons at the center of the container */
     padding-top: 45px;
     padding-bottom: 45px;
+
 }
 
-.button {
+.learn-button {
     padding: 10px 20px;
-    margin: 5px; /* Reduced margin for closer proximity */
-    background-color: #007BFF; /* Bootstrap primary blue */
+    margin-right: 10px; /* Add margin to create space between buttons */
+    background-color: #017b61; /* Bootstrap primary blue */
     color: white;
-    text-align: center;
+    text-align: left;
     text-decoration: none;
     display: inline-block;
     font-size: 20px;
@@ -58,42 +66,66 @@ nav .navbar-brand {
     border-radius: 12px;
 }
 
-.button:hover {
-    text-decoration: none; /* Explicitly remove underline on hover */
+.quiz-button {
+    padding: 10px 20px;
+    background-color: #e7e7e7;
+    color: black;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+    border-radius: 12px;
 }
 
-.img-hover {
-    position: relative;
-    overflow: hidden;
-}
-.img-hover img {
-    transition: all 0.3s ease;
-}
-.img-hover:hover img {
-    filter: brightness(50%);
-}
-.img-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.learn-button:hover {
+    text-decoration: none; /* Explicitly remove underline on hover */
+    background-color: #013d30;
     color: white;
-    font-size: 20px; /* Adjusted font size */
-    text-align: center;
-    width: 90%; /* Reduce width to avoid edge clipping */
-    padding: 5px; /* Add padding for better legibility */
-    box-sizing: border-box; /* Include padding in width calculation */
-    white-space: nowrap; /* Prevents text from wrapping */
-    overflow: hidden; /* Hides text that overflows the element's box */
-    text-overflow: ellipsis; /* Show ellipsis when text overflows */
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s, opacity 0.5s linear;
 }
-.img-hover:hover .img-text {
-    visibility: visible;
-    opacity: 1;
+
+.quiz-button:hover{
+    text-decoration: none; /* Explicitly remove underline on hover */
+    background-color: rgb(152, 152, 152);
+    color: black;
 }
+
+/* Vinyl and album cover wrapper adjustments */
+.vinyl-wrapper {
+    display: flex;
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    padding-top: 75px;
+}
+
+.vinyl-image {
+    width: 100%;               /* Adjust size as needed */
+    max-width: 600px;         /* Limits the size to be reasonable on large screens */
+    position: relative;       /* Ensures it can be positioned accurately within the flex container */
+    z-index: 1;               /* Keep vinyl in the background */
+}
+
+.album-cover {
+    position: absolute;       /* Allows precise placement over the vinyl */
+    width: 86%;               /* Album cover is smaller than the vinyl */
+    z-index: 2;               /* Ensures album cover is on top */
+    transform: rotate(-3deg); /* Tilts the album cover to the left by 10 degrees */
+}
+
+.cover-image {
+    width: 100%;              /* Ensures cover image fills the album cover div */
+    display: block;           /* Removes any extra space around the image */
+    transition: opacity 0.4s ease;  /* Smooth transition for the opacity */
+    opacity: 1;  /* Default opacity */
+}
+
+.album-cover.fade-out .cover-image {
+    opacity: 0;  /* Fade out effect */
+}
+
+
+
+
 
 /*
  * LEARN CSS
@@ -104,7 +136,6 @@ nav .navbar-brand {
     font-size: 25px;
     font-weight: 800;
 }
-
 
 .mapDiv{
     display: flex;
@@ -119,8 +150,6 @@ nav .navbar-brand {
     height: 200px;
 }
 
-
-
 .container {
     text-align: center; /* Centers the content of the container */
 }
@@ -128,9 +157,3 @@ nav .navbar-brand {
 .mapDiv {
     margin-bottom: 20px; /* Adds space between the map and the media player */
 }
-
-
-
-
-
-
