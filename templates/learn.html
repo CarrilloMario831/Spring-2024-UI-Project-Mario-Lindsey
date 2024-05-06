@@ -21,41 +21,48 @@
     </script>
 </head>
 
-<body>
+    <body>
 
-    <div class="container">
+        <div class="container">
 
-        <div class="row">
-
-            <div class="col-6">
-                <img src="{{ item.image }}" alt="{{ item.name }}" width="600">
-            </div>
-
-            <div class="col-6">
+            <div class="row">
+                
                 <div class="regionName">
                     {{ item.name }}
                 </div>
-                <div class="regionDescription">
-                    {{ item.description}}
+
+                <div class="col-6">
+                   
+                    <img src="{{ item.image }}" alt="{{ item.name }}" width="450">
+                
                 </div>
-                <div>
-                    {{ item.count }}
+
+                <div class="col-6">
+                
+                    <div class="regionDescription">
+                        {{ item.description}}
+                    </div>
+
+                    <div>
+                        {{ item.count }}
+                    </div>
+
                 </div>
+
             </div>
 
-        </div>
+            <div class="row">
 
-        <div class="row">
-            <audio id="audioPlayer" controls>
-                <source src="{{item.audio1}}">
-            </audio>
-        </div>
+                <audio id="audioPlayer" controls>
+                    <source src="{{item.audio1}}">
+                </audio>
+
+            </div>
 
         
+        </div>
 
-    </div>
-
-</body>
+    </body>
 
 </html>
 
