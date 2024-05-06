@@ -1,3 +1,4 @@
+
 .note {
     position: fixed;
     pointer-events: none; /* Makes the element non-interactive */
@@ -28,7 +29,6 @@ nav .navbar-brand {
     font-size: 18px;
 }
 
-
 /* homepage.html CSS */
 .hompage-header{
     font-weight: 900;
@@ -50,13 +50,12 @@ nav .navbar-brand {
     justify-content: left; /* Align buttons at the center of the container */
     padding-top: 45px;
     padding-bottom: 45px;
-
 }
 
 .learn-button {
     padding: 10px 20px;
     margin-right: 10px; /* Add margin to create space between buttons */
-    background-color: #017b61; /* Bootstrap primary blue */
+    background-color: #017b61;
     color: white;
     text-align: left;
     text-decoration: none;
@@ -91,6 +90,14 @@ nav .navbar-brand {
 }
 
 /* Vinyl and album cover wrapper adjustments */
+.album-backdrop{
+    position: absolute;       /* Allows precise placement over the vinyl */
+    width: 90%;
+    z-index: 1; 
+    transform: rotate(2deg); /* Tilts the album cover to the left by 10 degrees */
+}
+
+
 .vinyl-wrapper {
     display: flex;
     justify-content: center;  /* Center horizontally */
@@ -99,16 +106,16 @@ nav .navbar-brand {
 }
 
 .vinyl-image {
-    width: 100%;               /* Adjust size as needed */
+    width: 100%;              /* Adjust size as needed */
     max-width: 600px;         /* Limits the size to be reasonable on large screens */
     position: relative;       /* Ensures it can be positioned accurately within the flex container */
-    z-index: 1;               /* Keep vinyl in the background */
+    z-index: 2;               /* Keep vinyl in the background */
 }
 
 .album-cover {
     position: absolute;       /* Allows precise placement over the vinyl */
-    width: 86%;               /* Album cover is smaller than the vinyl */
-    z-index: 2;               /* Ensures album cover is on top */
+    width: 88%;               /* Album cover is smaller than the vinyl */
+    z-index: 3;               /* Ensures album cover is on top */
     transform: rotate(-3deg); /* Tilts the album cover to the left by 10 degrees */
 }
 
@@ -155,14 +162,13 @@ nav .navbar-brand {
 }
 
 .mapDiv {
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 20px; /* Adds space between the map and the media player */
 }
 
-
 /* learn.html CSS */
 .regionName{
-    font-size: 35px;
+    font-size: 40px;
     font-weight: 800;
     text-align: center;
     padding-top: 10px;
@@ -170,5 +176,23 @@ nav .navbar-brand {
 
 .regionDescription{
     font-size: 20px;
-    padding-top: 10px;
+    padding-top: 100px;
+    text-align: center;
+}
+
+.map-button-container {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.map-button.btn {
+    padding: 10px 20px;
+    background-color: #017b61;
+    color: white;
+}
+
+.map-button.btn:hover{
+    text-decoration: none;
+    background-color: #013d30;
+    color: white;
 }

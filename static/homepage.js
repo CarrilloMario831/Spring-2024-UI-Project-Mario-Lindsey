@@ -23,12 +23,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
-
 // Define only the image filenames in the array
 var albums = [
     'MariachiVargas.jpg',
     'SonMadera.jpg',
+    'Chalino.png',
     'LosTigres.png',
     'LosReyes.jpg'
 ];
