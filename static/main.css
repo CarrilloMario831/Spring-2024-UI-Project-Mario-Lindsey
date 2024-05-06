@@ -128,7 +128,7 @@ nav .navbar-brand {
 
 
 /*
- * LEARN CSS
+ * map.html CSS
  */
 .instructions-header{
     padding-top: 10px;
@@ -157,4 +157,18 @@ nav .navbar-brand {
 .mapDiv {
     margin-top: 50px;
     margin-bottom: 20px; /* Adds space between the map and the media player */
+}
+
+
+/* learn.html CSS */
+.regionName{
+    font-size: 35px;
+    font-weight: 800;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.regionDescription{
+    font-size: 20px;
+    padding-top: 10px;
 }

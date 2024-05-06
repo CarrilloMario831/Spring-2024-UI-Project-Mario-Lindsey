@@ -19,29 +19,35 @@
     </script>
 </head>
 
-<body>
+    <body>
 
-    <div class="container">
+        <div class="container">
 
-        <div class="row">
-
-            <div class="col-6">
-                <img src="{{ item.image }}" alt="{{ item.name }}" width="600">
-            </div>
-
-            <div class="col-6">
+            <div class="row">
+                
                 <div class="regionName">
                     {{ item.name }}
                 </div>
-                <div class="regionDescription">
-                    {{ item.description}}
-                </div>
-                <div>
-                    {{ item.count }}
-                </div>
-            </div>
 
-        </div>
+                <div class="col-6">
+                   
+                    <img src="{{ item.image }}" alt="{{ item.name }}" width="450">
+                
+                </div>
+
+                <div class="col-6">
+                
+                    <div class="regionDescription">
+                        {{ item.description}}
+                    </div>
+
+                    <div>
+                        {{ item.count }}
+                    </div>
+
+                </div>
+
+            </div>
 
         <div class="row">  
             <audio id="audioPlayer" controls>
@@ -60,7 +66,7 @@
 
     </div>
 
-</body>
+    </body>
 
 </html>
 
