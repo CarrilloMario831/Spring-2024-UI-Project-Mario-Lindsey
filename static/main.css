@@ -181,17 +181,65 @@ nav .navbar-brand {
 }
 
 .map-button-container {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 20px;
 }
 
 .map-button.btn {
-    padding: 10px 20px;
     background-color: #017b61;
     color: white;
 }
 
 .map-button.btn:hover{
+    text-decoration: none;
+    background-color: #013d30;
+    color: white;
+}
+
+.quizButtons{
+    padding-top: 20px;
+}
+
+.mapQuiz{
+    padding-top: 20px;
+    font-size: 25px;
+    font-weight: 800;
+    padding-bottom: 15px;
+}
+
+.quizText{
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.end1{
+    font-size: 60px;
+    font-weight: 800;
+    padding-bottom: 20px;
+}
+
+.end2{
+    font-weight: 300;
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+
+.map2.btn {
+    background-color: #017b61;
+    color: white;
+}
+
+.map2.btn:hover{
+    text-decoration: none;
+    background-color: #013d30;
+    color: white;
+}
+
+.map3.btn {
+    background-color: #017b61;
+    color: white;
+}
+
+.map3.btn:hover{
     text-decoration: none;
     background-color: #013d30;
     color: white;

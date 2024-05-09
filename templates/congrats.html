@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 end1">
+                    Congratulations! 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 end2">
+                    You have completed the quiz. <br>
+                    Below is a handpicked playlist with a handful of Mexico's classics. 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <iframe style="border-radius:12px; padding-bottom: 20px;" src="https://open.spotify.com/embed/playlist/7ctM8fjoOOC8TEvwOmRFu1?utm_source=generator" width="50%" height="425" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="eager"></iframe>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <button type="button" class="map3 btn" onclick="window.location.href='/'">Home</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+{% endblock %}

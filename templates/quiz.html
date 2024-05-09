@@ -6,7 +6,10 @@
     <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <script src="{{ url_for('static', filename='quiz.js') }}"></script>
+
         <script>
+            let currentQuestionAnsweredCorrectly = false;
+
             function toggleAudio() {
                 var audio = document.getElementById("audioPlayer");
                 if (audio.paused) {
@@ -15,15 +18,38 @@
                     audio.pause();
                 }
             }
+
+            function checkAnswer(choice, correctAnswer) {
+                if (choice == correctAnswer) {
+                    alert('Correct answer!');
+                    currentQuestionAnsweredCorrectly = true;
+                } else {
+                    alert('Wrong answer, try again!');
+                    currentQuestionAnsweredCorrectly = false;
+                }
+            }
+
+            function goToNextQuestion() {
+                if (!currentQuestionAnsweredCorrectly) {
+                    alert('Please answer the current question correctly before moving on!');
+                    return;
+                }
+
+                let nextId = parseInt("{{ item.id }}") + 1;
+                if (nextId <= 6) {
+                    window.location.href = "/quiz/" + nextId;
+                } else {
+                    window.location.href = "/congrats";
+                }
+            }
         </script>
     </head>
 
     <body>
         <div class = "container">
-
             <div class = "row">
                 
-                <div class = "col-12">
+                <div class = "col-12 quizText">
                     {{item.id}}. {{ item.question }}
                 </div>
 
@@ -226,9 +252,23 @@
                     <source src="{{item.audio}}">
                 </audio>
             </div>
-            
+
+            <div class="row">
+                <div class="col-12 quizButtons">
+                    {% for i in range(1, 7) %}
+                        <button type="button" class="btn btn-primary m-1" onclick="checkAnswer('{{ item['choice' + i|string] }}', '{{ item.answer }}')">
+                            {{ item['choice' + i|string] }}
+                        </button>
+                    {% endfor %}
+                    <button type="button" class="btn btn-secondary m-1" onclick="goToNextQuestion()">
+                        Next
+                    </button>
+                </div>
+            </div>
 
         </div>
+
+    </body>
 
 </html>
 

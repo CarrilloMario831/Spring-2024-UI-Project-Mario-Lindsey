@@ -151,10 +151,13 @@ def quiz(item_id):
 def view_item(item_id):
     item = data.get(item_id)
     if item:
-        item["count"] += 1
         return render_template('learn.html', item=item)
     else:
         return "Item not found", 404
+   
+@app.route('/congrats')
+def congrats():
+   return render_template("congrats.html")
 
 if __name__ == '__main__':
    app.run(debug = True)
